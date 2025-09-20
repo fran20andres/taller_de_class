@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>pares e impares</title>
-    <link rel="stylesheet" href="estilos.css">
+   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <h1>Bienvenido al identificador de pares e impares usando HTML, PHP y CSS</h1>
@@ -20,7 +20,7 @@
     </form>
 
 <?php
-// Definimos la clase que procesa los números
+
 class IdentificadorNumeros {
     private $entrada;
     private $resultados = [];
@@ -29,7 +29,7 @@ class IdentificadorNumeros {
         $this->entrada = $entrada;
     }
 
-    // Método para procesar la entrada y clasificar los números
+
     public function procesar(): void {
         $tokens = explode(",", $this->entrada);
 
@@ -50,18 +50,18 @@ class IdentificadorNumeros {
         }
     }
 
-    // Método para validar si un valor es un número entero (incluye signo)
+   
     private function esEntero(string $valor): bool {
         return preg_match('/^[+-]?\d+$/', $valor) === 1;
     }
 
-    // Método para obtener los resultados procesados
+  
     public function obtenerResultados(): array {
         return $this->resultados;
     }
 }
 
-// Procesamos el formulario si se envió
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $entrada = trim($_POST["numeros"]);
     if ($entrada !== "") {
