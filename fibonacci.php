@@ -48,25 +48,32 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $numero = $_POST['numero'];
     $operacion = $_POST['operacion'];
 
-    // Crear una instancia de la clase Calculadora
-    $calculadora = new Calculadora($numero);
+    // Comprobamos que el número esté en el rango permitido
+    if ($numero >= 0 && $numero <= 100) {
+        // Crear una instancia de la clase Calculadora
+        $calculadora = new Calculadora($numero);
 
-    // Variable para almacenar el resultado
-    $resultado = '';
+        // Variable para almacenar el resultado
+        $resultado = '';
 
-    // Según la operación seleccionada, realizamos el cálculo correspondiente
-    if ($operacion == 'fibonacci') {
-        $resultado = $calculadora->calcularFibonacci();  // Calculamos la sucesión de Fibonacci
-    } elseif ($operacion == 'factorial') {
-        $resultado = $calculadora->calcularFactorial();  // Calculamos el factorial
-    }
+        // Según la operación seleccionada, realizamos el cálculo correspondiente
+        if ($operacion == 'fibonacci') {
+            $resultado = $calculadora->calcularFibonacci();  // Calculamos la sucesión de Fibonacci
+        } elseif ($operacion == 'factorial') {
+            $resultado = $calculadora->calcularFactorial();  // Calculamos el factorial
+        }
 
-    // Mostrar el resultado
-    echo "<h3>Resultado:</h3>";
-    if (is_array($resultado)) {
-        echo "Sucesión de Fibonacci: " . implode(', ', $resultado);
+        // Mostrar el resultado
+        echo "<h3>Resultado:</h3>";
+        if (is_array($resultado)) {
+            echo "Sucesión de Fibonacci: " . implode(', ', $resultado);
+        } else {
+            echo "Factorial de {$numero}: " . $resultado;
+        }
     } else {
-        echo "Factorial de {$numero}: " . $resultado;
+        // Si el número no está en el rango permitido, mostramos un mensaje de error
+        echo "<h3>Error:</h3>";
+        echo "El número ingresado debe estar entre 0 y 100.";
     }
 }
 

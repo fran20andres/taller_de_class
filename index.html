@@ -3,15 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fibonacci</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
     <h1>Calculadora de Fibonacci y Factorial</h1>
     <form action="fibonacci.php" method="POST">
         <label for="numero">Ingresa un número:</label>
-        <input type="number" id="numero" name="numero" min="0" max="1000" required>
+        <input type="number" id="numero" name="numero" min="0" max="100" required>
         <label for="operacion">Selecciona una operación:</label>
         <select id="operacion" name="operacion" required>
             <option value="fibonacci">Sucesión de Fibonacci</option>

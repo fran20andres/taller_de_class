@@ -1,0 +1,72 @@
+/* Fondo de la página en azul claro */
+body {
+    background-color: #a2c8f7;  /* Azul claro */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;  /* Asegura que todo esté centrado en columna */
+}
+
+/* Título del formulario */
+h1 {
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;  /* Espacio debajo del título */
+}
+
+/* Estilo para el contenedor del formulario */
+form {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo transparente */
+    border-radius: 15px;  /* Bordes redondeados */
+    border: 2px solid #ffffff; /* Borde blanco */
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Estilo para las etiquetas y los campos de entrada */
+label {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Estilo para los inputs */
+input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;  /* Bordes redondeados */
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.6);  /* Fondo transparente */
+    font-size: 16px;
+}
+
+/* Estilo para el botón */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00b5e2;  /* Azul celeste */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover para el botón */
+button:hover {
+    background-color: #008eb0;  /* Azul celeste oscuro */
+}
+
+/* Estilo para el texto del resultado */
+h3 {
+    color: #fff;
+    text-align: center;
+}
