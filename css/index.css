@@ -1,0 +1,101 @@
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #e8f5e9, #ffffff);
+    color: #2e7d32;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    margin: 40px 0 20px;
+    font-size: 2.5rem;
+    color: #1b5e20;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+form {
+    background: #ffffffe6;
+    padding: 25px;
+    width: 500px;
+    max-width: 100%;
+    border: 2px solid #2e7d32;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(46, 125, 50, 0.3);
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+textarea, input {
+    width: 95%;
+    padding: 14px;
+    margin-top: 14px;
+    border: 2px solid #2e7d32;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+textarea:focus, input:focus {
+    border-color: #1b5e20;
+    background: rgba(232, 245, 233, 0.85);
+    transform: scale(1.02);
+    outline: none;
+}
+
+button {
+    margin-top: 20px;
+    padding: 14px;
+    background: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: #1b5e20;
+    transform: scale(1.05);
+}
+
+.resultado {
+    background: #ffffffb3;
+    border: 2px solid #2e7d32;
+    border-radius: 12px;
+    padding: 20px;
+    width: 600px;
+    max-width: 90%;
+    margin: 20px auto;
+    color: #1b5e20;
+    font-size: 1.1rem;
+    text-align: justify;
+    box-shadow: 0 0 12px rgba(46, 125, 50, 0.25);
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.resaltado {
+    background: #a5d6a7;
+    color: #000;
+    font-weight: bold;
+    padding: 2px 4px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.resaltado:hover {
+    background: #81c784;
+}
