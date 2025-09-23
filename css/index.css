@@ -1,0 +1,104 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e88e5, #43a047); /* azul + verde */
+    color: #fff;
+}
+
+/* Contenedor central */
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 30px 40px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    text-align: center;
+    width: 350px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Títulos */
+h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #e0f7fa;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px 0;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    box-shadow: 0 0 8px #64b5f6;
+    transform: scale(1.03);
+}
+
+/* Botón */
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #43a047, #1e88e5);
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+/* Resultado */
+.resultado {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background: rgba(0, 150, 136, 0.3);
+    padding: 12px;
+    border-radius: 12px;
+    animation: slideIn 0.8s ease-in-out;
+}
+
+a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #bbdefb;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #e3f2fd;
+    text-decoration: underline;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
