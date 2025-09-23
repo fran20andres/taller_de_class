@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Operaciones con Conjuntos</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <h1>Calculadora de Conjuntos</h1>
+    <form action="conjunto.php" method="POST">
+        <label for="conjuntoA">Conjunto A (separar con comas):</label>
+        <input type="text" id="conjuntoA" name="conjuntoA" pattern="^[-]?\d+(,[-]?\d+)*$" required
+            placeholder="Ej: 1,2,3">
+
+        <label for="conjuntoB">Conjunto B (separar con comas):</label>
+        <input type="text" id="conjuntoB" name="conjuntoB" pattern="^[-]?\d+(,[-]?\d+)*$" required
+            placeholder="Ej: 3,4,5">
+
+        <button type="submit">Calcular</button>
+    </form>
+</body>
+
+</html>
