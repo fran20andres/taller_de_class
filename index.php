@@ -39,7 +39,6 @@
                 if ($valor === "") continue;
 
                 if ($this->esNumeroReal($valor)) {
-
                     $this->numeros[] = (float)$valor;
                 } else {
                     $this->errores[] = $valor;
@@ -49,7 +48,6 @@
 
         private function esNumeroReal(string $valor): bool
         {
-
             return is_numeric($valor);
         }
 
@@ -69,36 +67,51 @@
 
             $mitad = (int)($n / 2);
             if ($n % 2 === 1) {
-
                 return $nums[$mitad];
             } else {
-
                 return ($nums[$mitad - 1] + $nums[$mitad]) / 2;
             }
         }
 
-
+        
         public function calcularModa(): array
         {
-            if (count($this->numeros) === 0) return [];
+            if (count($this->numeros) === 0) {
+                return [];
+            }
 
+           
+            $redondeados_str = array_map(function($num) { 
+                return number_format(round($num, 4), 4, '.', ''); 
+            }, $this->numeros);
+            
+            
+            $frecuencias = array_count_values($redondeados_str);
+            
+            
             if (empty($frecuencias)) {
                 return [];
             }
+            
+            
             $maxFrecuencia = max($frecuencias);
-            $redondeados = array_map(fn($num) => round($num, 4), $this->numeros);
-            $frecuencias = array_count_values($redondeados);
-            $maxFrecuencia = max($frecuencias);
+            
+            
             if ($maxFrecuencia === 1) {
                 return [];
             }
-
+            
+           
             $modas = [];
-            foreach ($frecuencias as $num => $freq) {
+            foreach ($frecuencias as $num_str => $freq) {
                 if ($freq === $maxFrecuencia) {
-                    $modas[] = $num;
+                    $modas[] = (float) $num_str;
                 }
             }
+            
+           
+            sort($modas);
+            
             return $modas;
         }
 
@@ -141,8 +154,8 @@
                 if (count($moda) === 0) {
                     echo "<li>Moda: No hay moda (todos los valores son únicos)</li>";
                 } else {
-
-                    $modas_formateadas = array_map(fn($m) => number_format($m, 4), $moda);
+                   
+                    $modas_formateadas = array_map(function($m) { return number_format($m, 4); }, $moda);
                     echo "<li>Moda: " . implode(", ", $modas_formateadas) . "</li>";
                 }
                 echo "</ul>";
