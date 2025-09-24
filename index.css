@@ -1,1 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+form {
+    margin: 20px auto;
+    padding: 20px;
+    width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+input {
+    margin: 5px 0 15px;
+    padding: 8px;
+    width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #005fa3;
+}
+
+.arbol ul {
+    padding-top: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.arbol li {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 5px 0 5px;
+}
+
+.arbol li::before, .arbol li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    border-top: 2px solid #000;
+    width: 50%;
+    height: 20px;
+}
+
+.arbol li::before {
+    left: -50%;
+    border-right: 2px solid #000;
+}
+
+.arbol li::after {
+    right: -50%;
+    border-left: 2px solid #000;
+}
+
+.arbol li:only-child::before, .arbol li:only-child::after {
+    display: none;
+}
+
+.arbol li:only-child {
+    padding-top: 0;
+}
+
+.arbol li:first-child::before, .arbol li:last-child::after {
+    border: none;
+}
+
+.nodo {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 50%;
+    background: #4CAF50;
+    color: white;
+    font-weight: bold;
+    min-width: 30px;
+}
 
